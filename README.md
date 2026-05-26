@@ -82,17 +82,6 @@ Upload a CSV → get forecasts, alerts, and order recommendations in seconds.
 > Built for real-time pharmaceutical inventory forecasting and alerting using time-series models and Next.js server architecture.
 
 ---
-
-## Screenshots
-<img width="1512" height="826" alt="image" src="https://github.com/user-attachments/assets/faf72f68-ce72-4e74-8805-53876beae1e2" />
-<img width="1512" height="824" alt="image" src="https://github.com/user-attachments/assets/5c4130a8-f9c9-4bf5-91fe-111313481f11" />
-<img width="1512" height="826" alt="image" src="https://github.com/user-attachments/assets/3e166e66-6cbb-4cbe-b841-4f334512b06d" />
-<img width="1269" height="571" alt="image" src="https://github.com/user-attachments/assets/f5622625-1b33-4eaa-8196-582e36a0e75f" />
-<img width="1512" height="828" alt="image" src="https://github.com/user-attachments/assets/0e6f0a70-fabb-4e72-9e12-476ccff36be5" />
-<img width="1512" height="825" alt="image" src="https://github.com/user-attachments/assets/140ca20e-f4b0-4d6d-996f-ab8a156be94b" />
-<img width="1512" height="826" alt="image" src="https://github.com/user-attachments/assets/cdda6d1b-a788-4b99-ad4d-6f82ddb39c45" />
-
----
 ## Contact
 Built by [@mkaavish](https://github.com/mkaavish)  
 Business Email: mkhht.llc@gmail.com 
