@@ -76,3 +76,39 @@ Upload a CSV → get forecasts, alerts, and order recommendations in seconds.
 ---
 
 ## Architecture
+
+Browser
+└── Next.js App Router (Vercel)
+├── /dashboard — Server component, parallel DB queries
+├── /inventory — SWR client, drug catalog table
+├── /inventory/[id] — Forecast chart + order recommendation
+├── /alerts — Alert feed with type/severity filters
+└── /upload — CSV/Excel ingestion pipeline
+
+API Routes
+├── /api/forecast/[drugId] — Runs forecasting engine, returns ForecastResult
+├── /api/alerts — GET (list) / POST (regenerate) / PATCH (acknowledge)
+└── /api/upload/dispensed — Parses file, batch inserts, triggers alerts
+
+Forecasting Engine (server-side)
+├── SMA, Exponential Smoothing, SES, Holt-Winters, Croston
+├── Auto mode: benchmarks all models, picks lowest WAPE
+└── Outputs: predicted values, confidence intervals, reorder point, safety stock
+
+---
+
+## Screenshots
+<img width="1512" height="826" alt="image" src="https://github.com/user-attachments/assets/faf72f68-ce72-4e74-8805-53876beae1e2" />
+<img width="1512" height="824" alt="image" src="https://github.com/user-attachments/assets/5c4130a8-f9c9-4bf5-91fe-111313481f11" />
+<img width="1512" height="826" alt="image" src="https://github.com/user-attachments/assets/3e166e66-6cbb-4cbe-b841-4f334512b06d" />
+<img width="1269" height="571" alt="image" src="https://github.com/user-attachments/assets/f5622625-1b33-4eaa-8196-582e36a0e75f" />
+<img width="1512" height="828" alt="image" src="https://github.com/user-attachments/assets/0e6f0a70-fabb-4e72-9e12-476ccff36be5" />
+<img width="1512" height="825" alt="image" src="https://github.com/user-attachments/assets/140ca20e-f4b0-4d6d-996f-ab8a156be94b" />
+<img width="1512" height="826" alt="image" src="https://github.com/user-attachments/assets/cdda6d1b-a788-4b99-ad4d-6f82ddb39c45" />
+
+---
+## Contact
+Built by [@mkaavish](https://github.com/mkaavish)  
+Business Email: mkhht.llc@gmail.com 
+Personal Email: mkaavish@gmail.com
+Live product: [rxpredict.app](https://rxpredict.app)
