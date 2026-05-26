@@ -2,7 +2,7 @@
 
 > Live at [rxpredict.app](https://rxpredict.app)
 
-RxPredict helps independent pharmacies stop running out of stock. Pharmacists upload their dispensing history and the platform automatically forecasts demand per drug, flags reorder alerts, and recommends exact order quantities — all in a clean mobile-friendly dashboard.
+RxPredict helps independent pharmacies to prevent over or under stock that may effect their profits and sales. Pharmacists upload their dispensing history and the platform automatically forecasts demand per drug, flags reorder alerts, and recommends exact order quantities — all in a clean mobile-friendly dashboard.
 
 > ⚠️ This is a showcase repo. The source code is private.
 
