@@ -75,40 +75,11 @@ Upload a CSV → get forecasts, alerts, and order recommendations in seconds.
 
 ---
 
-## Architecture
+## System Architecture
 
-Browser
-└── Next.js App Router (Vercel)
-    ├── /dashboard — Server component with parallel DB queries
-    ├── /inventory — SWR client with drug catalog table
-    ├── /inventory/[id] — Forecast charts + order recommendations
-    ├── /alerts — Alert feed with type/severity filters
-    └── /upload — CSV/Excel ingestion pipeline
+<img width="1774" height="887" alt="image" src="https://github.com/user-attachments/assets/4f51bd64-9d6e-475f-80c7-f10515b44840" />
 
-API Routes
-├── /api/forecast/[drugId]
-│   └── Runs forecasting engine and returns ForecastResult
-├── /api/alerts
-│   ├── GET    → List alerts
-│   ├── POST   → Regenerate alerts
-│   └── PATCH  → Acknowledge alerts
-└── /api/upload/dispensed
-    └── Parses files, batch inserts data, and triggers alerts
-
-Forecasting Engine (Server-Side)
-├── Models
-│   ├── Simple Moving Average (SMA)
-│   ├── Exponential Smoothing
-│   ├── Simple Exponential Smoothing (SES)
-│   ├── Holt-Winters
-│   └── Croston Method
-├── Auto Mode
-│   └── Benchmarks all models and selects the lowest WAPE
-└── Outputs
-    ├── Predicted values
-    ├── Confidence intervals
-    ├── Reorder points
-    └── Safety stock calculations
+> Built for real-time pharmaceutical inventory forecasting and alerting using time-series models and Next.js server architecture.
 
 ---
 
