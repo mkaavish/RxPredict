@@ -79,21 +79,36 @@ Upload a CSV → get forecasts, alerts, and order recommendations in seconds.
 
 Browser
 └── Next.js App Router (Vercel)
-├── /dashboard — Server component, parallel DB queries
-├── /inventory — SWR client, drug catalog table
-├── /inventory/[id] — Forecast chart + order recommendation
-├── /alerts — Alert feed with type/severity filters
-└── /upload — CSV/Excel ingestion pipeline
+    ├── /dashboard — Server component with parallel DB queries
+    ├── /inventory — SWR client with drug catalog table
+    ├── /inventory/[id] — Forecast charts + order recommendations
+    ├── /alerts — Alert feed with type/severity filters
+    └── /upload — CSV/Excel ingestion pipeline
 
 API Routes
-├── /api/forecast/[drugId] — Runs forecasting engine, returns ForecastResult
-├── /api/alerts — GET (list) / POST (regenerate) / PATCH (acknowledge)
-└── /api/upload/dispensed — Parses file, batch inserts, triggers alerts
+├── /api/forecast/[drugId]
+│   └── Runs forecasting engine and returns ForecastResult
+├── /api/alerts
+│   ├── GET    → List alerts
+│   ├── POST   → Regenerate alerts
+│   └── PATCH  → Acknowledge alerts
+└── /api/upload/dispensed
+    └── Parses files, batch inserts data, and triggers alerts
 
-Forecasting Engine (server-side)
-├── SMA, Exponential Smoothing, SES, Holt-Winters, Croston
-├── Auto mode: benchmarks all models, picks lowest WAPE
-└── Outputs: predicted values, confidence intervals, reorder point, safety stock
+Forecasting Engine (Server-Side)
+├── Models
+│   ├── Simple Moving Average (SMA)
+│   ├── Exponential Smoothing
+│   ├── Simple Exponential Smoothing (SES)
+│   ├── Holt-Winters
+│   └── Croston Method
+├── Auto Mode
+│   └── Benchmarks all models and selects the lowest WAPE
+└── Outputs
+    ├── Predicted values
+    ├── Confidence intervals
+    ├── Reorder points
+    └── Safety stock calculations
 
 ---
 
