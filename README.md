@@ -84,6 +84,4 @@ Upload a CSV → get forecasts, alerts, and order recommendations in seconds.
 ---
 ## Contact
 Built by [@mkaavish](https://github.com/mkaavish)  
-Business Email: mkhht.llc@gmail.com 
-Personal Email: mkaavish@gmail.com
 Live product: [rxpredict.app](https://rxpredict.app)
